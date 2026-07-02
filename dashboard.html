@@ -1,0 +1,169 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم | Torrema</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+}
+
+.welcome{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card a{
+    text-decoration:none;
+    color:#111;
+    font-weight:bold;
+}
+
+.logout{
+    background:#d32f2f;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Torrema Dashboard</h2>
+
+<button class="logout" onclick="logout()">
+تسجيل الخروج
+</button>
+
+</header>
+
+<div class="container">
+
+<div class="welcome">
+
+<h2 id="username">
+مرحباً
+</h2>
+
+<p>
+مرحباً بك في منصة Torrema لتعلم البرمجة.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>📚 الدورات</h3>
+<a href="courses.html">الدخول</a>
+</div>
+
+<div class="card">
+<h3>💻 لغات البرمجة</h3>
+<a href="#">عرض</a>
+</div>
+
+<div class="card">
+<h3>📰 المقالات</h3>
+<a href="articles.html">عرض</a>
+</div>
+
+<div class="card">
+<h3>💼 المشاريع</h3>
+<a href="#">عرض</a>
+</div>
+
+<div class="card">
+<h3>💬 المنتدى</h3>
+<a href="forum.html">الدخول</a>
+</div>
+
+<div class="card">
+<h3>⚙️ الإعدادات</h3>
+<a href="#">فتح</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+
+    window.location.href="login.html";
+
+}
+
+document.getElementById("username").innerHTML=
+"مرحباً " + user.full_name;
+
+function logout(){
+
+localStorage.removeItem("token");
+
+localStorage.removeItem("user");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
+```
