@@ -3,9 +3,9 @@ const form = document.getElementById("registerForm");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const full_name = document.getElementById("full_name").value;
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
+    const full_name = document.getElementById("full_name").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
@@ -37,7 +37,7 @@ form.addEventListener("submit", async (e) => {
         }
 
     } catch (error) {
-        alert("تعذر الاتصال بالخادم.");
         console.error(error);
+        alert("تعذر الاتصال بالخادم، تأكد أن backend يعمل على المنفذ 3000.");
     }
 });
