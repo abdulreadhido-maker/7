@@ -1,54 +1,215 @@
-// Torrema JavaScript
-
-console.log("مرحباً بك في Torrema");
-
-// رسالة عند الضغط على زر ابدأ الآن
-const heroButton = document.querySelector(".hero button");
-
-if (heroButton) {
-    heroButton.addEventListener("click", () => {
-        alert("مرحباً بك في Torrema 🚀");
-    });
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
 }
 
-// أزرار تسجيل الدخول وإنشاء الحساب
-const loginBtn = document.querySelector(".login");
-const registerBtn = document.querySelector(".register");
-
-if (loginBtn) {
-    loginBtn.addEventListener("click", () => {
-        window.location.href = "login.html";
-    });
+body{
+    background:#f3f3f3;
+    color:#222;
 }
 
-if (registerBtn) {
-    registerBtn.addEventListener("click", () => {
-        window.location.href = "register.html";
-    });
+/* Header */
+
+header{
+    background:#111;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
 }
 
-// تأثير بسيط على بطاقات الأقسام
-const cards = document.querySelectorAll(".card");
+.logo h1{
+    font-size:35px;
+}
 
-cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-10px)";
-    });
+nav{
+    display:flex;
+    gap:25px;
+}
 
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0)";
-    });
-});
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-size:18px;
+}
 
-// تغيير لون الهيدر عند التمرير
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
+nav a:hover{
+    color:#bdbdbd;
+}
 
-    if (window.scrollY > 50) {
-        header.style.background = "#000";
-        header.style.boxShadow = "0 3px 10px rgba(0,0,0,.4)";
-    } else {
-        header.style.background = "#111";
-        header.style.boxShadow = "none";
-    }
-});
+.buttons button{
+
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    font-size:16px;
+}
+
+.login{
+    background:#444;
+    color:white;
+}
+
+.register{
+    background:white;
+    color:black;
+}
+
+/* Hero */
+
+.hero{
+
+    text-align:center;
+
+    padding:120px 20px;
+
+    background:linear-gradient(135deg,#ffffff,#dcdcdc);
+
+}
+
+.hero h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+.hero button{
+
+    background:#111;
+    color:white;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.hero button:hover{
+
+    background:#444;
+
+}
+
+/* Cards */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+padding:70px 8%;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:12px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+font-size:28px;
+
+}
+
+.card p{
+
+font-size:17px;
+
+color:#555;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+margin-top:50px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
