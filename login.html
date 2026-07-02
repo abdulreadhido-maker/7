@@ -1,162 +1,99 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | Torrema</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #e6e6e6;
+            font-family: sans-serif;
+        }
 
-<meta charset="UTF-8">
+        .login-box {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-<title>تسجيل الدخول | Torrema</title>
+        .input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* تضمن توافق الأبعاد والـ padding */
+            outline: none;
+        }
 
-<link rel="stylesheet" href="style.css">
+        .input:focus {
+            border-color: #111;
+        }
 
-<style>
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
 
-body{
+        .btn:hover {
+            background: #444;
+        }
 
-display:flex;
+        .link {
+            margin-top: 20px;
+            text-align: center;
+        }
 
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
-background:#e6e6e6;
-
-}
-
-.login-box{
-
-background:white;
-
-padding:40px;
-
-width:400px;
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-
-}
-
-.login-box h1{
-
-text-align:center;
-
-margin-bottom:30px;
-
-}
-
-.input{
-
-width:100%;
-
-padding:15px;
-
-margin:10px 0;
-
-border:1px solid #ccc;
-
-border-radius:8px;
-
-font-size:16px;
-
-}
-
-.btn{
-
-width:100%;
-
-padding:15px;
-
-background:#111;
-
-color:white;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:18px;
-
-margin-top:20px;
-
-}
-
-.btn:hover{
-
-background:#444;
-
-}
-
-.link{
-
-margin-top:20px;
-
-text-align:center;
-
-}
-
-.link a{
-
-color:#111;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-</style>
-
+        .link a {
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="login-box">
+    <div class="login-box">
+        <h1>Torrema</h1>
+        
+        <form id="loginForm">
 
-<h1>Torrema</h1>
+            <input type="email" id="email" class="input" placeholder="البريد الإلكتروني" required>
 
-<form>
+            <input type="password" id="password" class="input" placeholder="كلمة المرور" required>
 
-<input
-type="email"
-class="input"
-placeholder="البريد الإلكتروني"
-required>
+            <button type="submit" class="btn">تسجيل الدخول</button>
+        </form>
 
-<input
-type="password"
-class="input"
-placeholder="كلمة المرور"
-required>
+        <div class="link">
+            ليس لديك حساب؟
+            <a href="register.html">إنشاء حساب</a>
+        </div>
+    </div>
 
-<button class="btn">
-تسجيل الدخول
-</button>
-
-</form>
-
-<div class="link">
-
-ليس لديك حساب؟
-
-<a href="register.html">
-
-إنشاء حساب
-
-</a>
-
-</div>
-
-</div>
+    <script src="login.js"></script>
 
 </body>
-
 </html>
-```
