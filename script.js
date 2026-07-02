@@ -1,5 +1,5 @@
 // Torrema JavaScript
-import authRoutes from "./routes/auth.js";
+
 console.log("مرحباً بك في Torrema");
 
 // رسالة عند الضغط على زر ابدأ الآن
