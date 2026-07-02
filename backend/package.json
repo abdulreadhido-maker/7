@@ -1,5 +1,4 @@
-```json
-{
+
   "name": "torrema",
   "version": "1.0.0",
   "description": "Torrema Programming Platform",
@@ -16,6 +15,3 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.12.0"
-  }
-}
-```
